@@ -3,6 +3,8 @@ This program is a simple `MPI+CUDA` that works for only 2 nodes. MPI is used for
 This program generates n numbers on the master node (Rank 0), sends them to node Rank 1. As soon as node 1 receives the data, sends them to it's GPU. On the GPU, all the numbers increase by 1.
 Finally, the results' array returns to the master node with MPI.
 
+- `Pinned memory` is utilized here to have a better performance.
+
 The program is designed to measure the communication time between nodes and within a node.
 
 #### Note 1: 
